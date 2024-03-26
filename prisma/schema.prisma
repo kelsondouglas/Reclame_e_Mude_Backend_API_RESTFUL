@@ -46,6 +46,7 @@ model Comment {
   userId    String
   postId    String
   user_name String
+  type      UserRole @default(USER)
   createdAt DateTime @default(now())
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
